@@ -1,14 +1,7 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
+import { createApp } from 'vue'
+import './style.less'
+import App from './App'
 
-import "./assets/main.css";
+import KudzuUI from '../packages'
 
-import kudzuUI from '../packages';
-
-const app = createApp(App);
-
-app.use(router);
-app.use(kudzuUI);
-
-app.mount("#app");
+createApp(App).use(KudzuUI).mount('#app')

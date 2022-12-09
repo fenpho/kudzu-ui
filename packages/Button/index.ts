@@ -1,10 +1,6 @@
-import { App, Plugin } from 'vue';
-import Button from './src/index.vue';
+import { withInstall } from '@kudzu/utils'
+import Button from './src/index'
 
-export const ButtonPlugin: Plugin = {
-  install(app: App) {
-    app.component('ku-button', Button);
-  },
-};
+export const kuButton = withInstall(Button)
 
-export { Button };
+export { Button }

@@ -1,14 +1,8 @@
 [
   {
-    "compName": "Button",
-    "compNameCN": "按钮",
+    "compName": "KuButton",
+    "compZhName": "按钮",
     "compDesc": "这是一个按钮",
-    "compClassName": "button"
-  },
-  {
-    "compName": "Tag",
-    "compNameCN": "标签",
-    "compDesc": "用于标记和选择",
-    "compClassName": "tag"
+    "compClassName": "ku-button"
   }
 ]
