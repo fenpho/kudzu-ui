@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import styles from './index.module.less'
+import './index.less'
 
 export default defineComponent({
   name: 'KuButton',
@@ -28,7 +28,7 @@ export default defineComponent({
     };
 
     return () => (
-      <button class={styles['ku-button']} onClick={handleClick} >
+      <button class="ku-button" onClick={handleClick} >
         { slots.default ? slots.default() : null }
       </button>
     )
