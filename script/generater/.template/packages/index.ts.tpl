@@ -3,17 +3,14 @@
  */
 import { App, Plugin } from 'vue';
 
-import { KuButtonPlugin } from './Button';
-import { KuTagPlugin } from './Tag';
+{{ importPlugins }}
 
 const kuPlugin: Plugin = {
   install(app: App) {
-    KuButtonPlugin.install?.(app);
-    KuTagPlugin.install?.(app);
+    {{ installPlugins }}
   },
 };
 
 export default kuPlugin;
 
-export * from './Button'
-export * from './Tag'
+{{ exportPlugins }}

@@ -11,17 +11,7 @@
     path: '/',
     component: Index,
   },
-  {
-        title: '按钮',
-        name: 'Button',
-        path: '/components/Button',
-        component: () => import('../packages/Button/docs/README.md'),
-      },{
-        title: '标签',
-        name: 'Tag',
-        path: '/components/Tag',
-        component: () => import('../packages/Tag/docs/README.md'),
-      }
+  {{ routes }}
  ]
 
  const routerConfig = {

@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import Preview from '@examples/components/Preview'
 import BaseKudzuButton from '../demo/base.vue'
 </script>
 
 # 按钮组件
 
-<BaseKudzuButton />
+<Preview comp-name='Button' demo-name='base'><BaseKudzuButton /></Preview>
