@@ -15,12 +15,12 @@
         title: '按钮',
         name: 'Button',
         path: '/components/Button',
-        component: () => import('../packages/Button/docs/README.md'),
+        component: () => import('../packages/components/Button/docs/README.md'),
       },{
         title: '标签',
         name: 'Tag',
         path: '/components/Tag',
-        component: () => import('../packages/Tag/docs/README.md'),
+        component: () => import('../packages/components/Tag/docs/README.md'),
       }
  ]
 

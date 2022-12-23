@@ -29,7 +29,7 @@ export default defineComponent({
     onMounted(async () => {
       data.sourceCode = (
         // 此处只能使用相对路径或者绝对路径
-        await import(`../../packages/${props.compName}/demo/${props.demoName}.vue?raw`)
+        await import(`../../packages/components/${props.compName}/demo/${props.demoName}.vue?raw`)
       ).default
 
       await nextTick() // 确保在源码都渲染好了以后再执行高亮
@@ -55,7 +55,7 @@ export default defineComponent({
           <code ref={sourceCode} class="language-html">{data.sourceCode}</code>
         </pre>
         <div class={style.control} onClick={changeSourceCodeStatus}>
-          { data.height === 'hide' ? <span>显示代码</span> : <span>隐藏代码</span> }
+          { data.height === '0' ? <span>显示代码</span> : <span>隐藏代码</span> }
         </div>
       </div>
     )

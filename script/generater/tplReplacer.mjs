@@ -10,26 +10,26 @@ const getTplFilePath = (meta) => ({
   // docs 目录
   readme: {
     from: './.template/packages/components/docs/README.md.tpl',
-    to: `../../packages/${meta.compName}/docs/README.md`
+    to: `../../packages/components/${meta.compName}/docs/README.md`
   },
   // demo 目录
   demo: {
     from: './.template/packages/components/demo/base.vue.tpl',
-    to: `../../packages/${meta.compName}/demo/base.vue`
+    to: `../../packages/components/${meta.compName}/demo/base.vue`
   },
   // src 目录
   tsx: {
     from: './.template/packages/components/src/index.tsx.tpl',
-    to: `../../packages/${meta.compName}/src/index.tsx`
+    to: `../../packages/components/${meta.compName}/src/index.tsx`
   },
   less: {
     from: './.template/packages/components/src/index.less.tpl',
-    to: `../../packages/${meta.compName}/src/index.less`
+    to: `../../packages/components/${meta.compName}/src/index.less`
   },
   // 根目录
   index: {
     from: './.template/packages/components/index.ts.tpl',
-    to: `../../packages/${meta.compName}/index.ts`
+    to: `../../packages/components/${meta.compName}/index.ts`
   },
 })
 
@@ -46,7 +46,7 @@ const compFilesTplReplacer = (meta) => {
 
 // 读取 packages/list.json 并更新
 const listJsonTplReplacer = (meta) => {
-  const listFilePath = '../../packages/list.json'
+  const listFilePath = '../../packages/components/list.json'
   const listFileTpl = fs.readFileSync(resolve(__dirname, listFilePath), 'utf-8')
   const listFileContent = JSON.parse(listFileTpl)
   listFileContent.push(meta)
@@ -68,7 +68,7 @@ const routerTplReplacer = (listFileContent) => {
         title: '${comp.compCnName}',
         name: '${comp.compName}',
         path: '/components/${comp.compName}',
-        component: () => import('../packages/${comp.compName}/docs/README.md'),
+        component: () => import('../packages/components/${comp.compName}/docs/README.md'),
       }`
     })
   }
@@ -81,7 +81,7 @@ const routerTplReplacer = (listFileContent) => {
 // 更新 index.ts
 const installTsTplReplacer = (listFileContent) => {
   const installFileFrom = './.template/packages/index.ts.tpl'
-  const installFileTo = '../../packages/index.ts'
+  const installFileTo = '../../packages/components/index.ts'
   const installFileTpl = fs.readFileSync(resolve(__dirname, installFileFrom), 'utf-8')
   const installMeta = {
     importPlugins: listFileContent.map(({ compName }) => `import { Ku${compName}Plugin } from './${compName}';`).join('\n'),
@@ -100,5 +100,5 @@ export default (meta) => {
   routerTplReplacer(listFileContent)
   installTsTplReplacer(listFileContent)
 
-  console.log(`组件新建完毕，请前往 packages/${meta.compName} 目录进行开发`);
+  console.log(`组件新建完毕，请前往 packages/components/${meta.compName} 目录进行开发`);
 }
