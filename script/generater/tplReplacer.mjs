@@ -46,7 +46,7 @@ const compFilesTplReplacer = (meta) => {
 
 // 读取 packages/list.json 并更新
 const listJsonTplReplacer = (meta) => {
-  const listFilePath = '../../packages/components/list.json'
+  const listFilePath = '../../packages/list.json'
   const listFileTpl = fs.readFileSync(resolve(__dirname, listFilePath), 'utf-8')
   const listFileContent = JSON.parse(listFileTpl)
   listFileContent.push(meta)
@@ -81,10 +81,10 @@ const routerTplReplacer = (listFileContent) => {
 // 更新 index.ts
 const installTsTplReplacer = (listFileContent) => {
   const installFileFrom = './.template/packages/index.ts.tpl'
-  const installFileTo = '../../packages/components/index.ts'
+  const installFileTo = '../../packages/index.ts'
   const installFileTpl = fs.readFileSync(resolve(__dirname, installFileFrom), 'utf-8')
   const installMeta = {
-    importPlugins: listFileContent.map(({ compName }) => `import { Ku${compName}Plugin } from './${compName}';`).join('\n'),
+    importPlugins: listFileContent.map(({ compName }) => `import { Ku${compName}Plugin } from './components/${compName}';`).join('\n'),
     installPlugins: listFileContent.map(({ compName }) => `Ku${compName}Plugin.install?.(app);`).join('\n    '),
     exportPlugins: listFileContent.map(({ compName }) => `export * from './${compName}'`).join('\n'),
   }

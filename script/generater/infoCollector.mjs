@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 const filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(filename)
 
-const listFilePath = '../../packages/components/list.json'
+const listFilePath = '../../packages/list.json'
 
 const RegxMap = {
   IS_COMP_NAME: /^[A-Z]/,

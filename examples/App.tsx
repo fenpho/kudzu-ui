@@ -1,7 +1,7 @@
 import { defineComponent, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import styles from './App.module.less'
-import ComponentList from '@kudzu/components/list.json'
+import ComponentList from '@kudzu/list.json'
 
 interface ComponentsItem {
   compName: String;
