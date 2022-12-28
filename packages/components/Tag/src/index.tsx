@@ -15,7 +15,9 @@ export default defineComponent({
 
   setup(props, { emit, slots }) {
     return () => (
-      <div />
+       <div class="ku-tag">
+        { slots.default ? slots.default() : null }
+      </div>
     )
   }
 })

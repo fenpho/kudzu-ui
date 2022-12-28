@@ -1,6 +1,6 @@
 <template>
   <div class="base-{{ compClassName }}">
-    <{{ compClassName }} />
+    <{{ compClassName }}>{{ compCnName }}</{{ compClassName }}>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="base-ku-tag">
-    <ku-tag />
+    <ku-tag>标签</ku-tag>
   </div>
 </template>
 

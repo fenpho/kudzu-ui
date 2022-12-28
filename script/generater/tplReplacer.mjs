@@ -86,7 +86,7 @@ const installTsTplReplacer = (listFileContent) => {
   const installMeta = {
     importPlugins: listFileContent.map(({ compName }) => `import { Ku${compName}Plugin } from './components/${compName}';`).join('\n'),
     installPlugins: listFileContent.map(({ compName }) => `Ku${compName}Plugin.install?.(app);`).join('\n    '),
-    exportPlugins: listFileContent.map(({ compName }) => `export * from './${compName}'`).join('\n'),
+    exportPlugins: listFileContent.map(({ compName }) => `export * from './components/${compName}'`).join('\n'),
   }
   const installFileContent = handlebars.compile(installFileTpl, { noEscape: true })(installMeta)
   fs.outputFile(resolve(__dirname, installFileTo), installFileContent, err => {
