@@ -16,12 +16,6 @@ export default defineComponent({
     }
   },
 
-  methods: {
-    handleClick(event: Event) {
-      this.$emit('click', { event })
-    }
-  },
-
   setup(props, { emit, slots }) {
     const handleClick = (event: Event) => {
       emit('click', { event })

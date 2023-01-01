@@ -5,6 +5,8 @@
   border: 1px solid #ebebeb;
   border-radius: 3px;
   transition: .2s;
+  max-width: 100%;
+  overflow: hidden;
 
   &:hover {
     box-shadow: 0 0 8px 0 rgb(232 237 250 / 60%), 0 2px 4px 0 rgb(232 237 250 / 50%);
@@ -13,8 +15,6 @@
   .display {
     padding: 24px;
     perspective: 0; // 景深，让fixed定位不脱离展示区域
-    height: 60vh;
-    overflow-y: auto;
   }
 
   .control {

@@ -1,6 +1,6 @@
 <template>
   <div class="base-ku-tag">
-    <ku-tag>标签</ku-tag>
+    <ku-tag :tag="tag">标签</ku-tag>
   </div>
 </template>
 
@@ -8,6 +8,17 @@
 defineOptions({
   name: 'BaseKuTag',
 })
+
+interface Tag {
+  name: string,
+  link: string
+}
+
+const tag: Tag = {
+  name: '标签',
+  link: ''
+}
+
 </script>
 
 
