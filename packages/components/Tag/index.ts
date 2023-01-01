@@ -1,6 +1,6 @@
 import { withInstall } from '@kudzu/utils'
-import Tag from './src/index'
+import KuTag from './src/index'
 
-export const KuTagPlugin = withInstall(Tag)
+export const KuTagPlugin = withInstall(KuTag)
 
-export { Tag }
+export { KuTag }

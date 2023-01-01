@@ -21,6 +21,16 @@
         name: 'Tag',
         path: '/components/Tag',
         component: () => import('../packages/components/Tag/docs/README.md'),
+      },{
+        title: '页头',
+        name: 'Header',
+        path: '/components/Header',
+        component: () => import('../packages/components/Header/docs/README.md'),
+      },{
+        title: '卡片',
+        name: 'Card',
+        path: '/components/Card',
+        component: () => import('../packages/components/Card/docs/README.md'),
       }
  ]
 

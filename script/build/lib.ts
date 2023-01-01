@@ -12,7 +12,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, '../../packages/index.ts'),
       name: 'KudzuUI',
       // the proper extensions will be added
-      fileName: 'kudzu-ui',
+      fileName: (format) => `kudzu-ui.${format}.js`,
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖

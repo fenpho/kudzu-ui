@@ -10,5 +10,17 @@
     "compCnName": "标签",
     "compDesc": "这是一个标签组件",
     "compClassName": "ku-tag"
+  },
+  {
+    "compName": "Header",
+    "compCnName": "页头",
+    "compDesc": "网页头部",
+    "compClassName": "ku-header"
+  },
+  {
+    "compName": "Card",
+    "compCnName": "卡片",
+    "compDesc": "卡片组件",
+    "compClassName": "ku-card"
   }
 ]

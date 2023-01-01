@@ -1,6 +1,6 @@
 import { withInstall } from '@kudzu/utils'
-import {{ compName }} from './src/index'
+import Ku{{ compName }} from './src/index'
 
-export const Ku{{ compName }}Plugin = withInstall({{ compName }})
+export const Ku{{ compName }}Plugin = withInstall(Ku{{ compName }})
 
-export { {{ compName }} }
+export { Ku{{ compName }} }

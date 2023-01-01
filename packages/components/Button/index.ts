@@ -1,6 +1,6 @@
 import { withInstall } from '@kudzu/utils'
-import Button from './src/index'
+import KuButton from './src/index'
 
-export const KuButtonPlugin = withInstall(Button)
+export const KuButtonPlugin = withInstall(KuButton)
 
-export { Button }
+export { KuButton }
