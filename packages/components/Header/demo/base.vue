@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
+import { getImageUrl } from '@kudzu/utils';
 
 defineOptions({
   name: 'BaseKuHeader',
@@ -29,12 +30,8 @@ interface Header {
   more: More
 }
 
-function getImageUrl(src: string) {
-  return new URL(src, import.meta.url).href
-}
-
 const header: Header = reactive({
-  logo: getImageUrl('./assets/logo.png'),
+  logo: getImageUrl('../assets/logo.png'),
   list: [
     {
       name: 'FENPHO',
@@ -48,7 +45,7 @@ const header: Header = reactive({
     {
       name: '',
       link: 'https://fenpho.github.io/',
-      icon: getImageUrl('./assets/github.png'),
+      icon: getImageUrl('../assets/github.png'),
     },
     {
       name: '',

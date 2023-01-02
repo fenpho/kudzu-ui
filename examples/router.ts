@@ -31,6 +31,11 @@
         name: 'Card',
         path: '/components/Card',
         component: () => import('../packages/components/Card/docs/README.md'),
+      },{
+        title: '页脚',
+        name: 'Footer',
+        path: '/components/Footer',
+        component: () => import('../packages/components/Footer/docs/README.md'),
       }
  ]
 

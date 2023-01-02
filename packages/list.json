@@ -22,5 +22,11 @@
     "compCnName": "卡片",
     "compDesc": "卡片组件",
     "compClassName": "ku-card"
+  },
+  {
+    "compName": "Footer",
+    "compCnName": "页脚",
+    "compDesc": "页面脚部",
+    "compClassName": "ku-footer"
   }
 ]
