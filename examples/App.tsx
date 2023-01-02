@@ -2,6 +2,7 @@ import { defineComponent, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import styles from './App.module.less'
 import ComponentList from '@kudzu/list.json'
+import { getImageUrl } from '@kudzu/assets';
 
 interface ComponentsItem {
   compName: String;
@@ -27,8 +28,34 @@ export default defineComponent({
       }))
     })
 
+    const header = reactive({
+      logo: getImageUrl('./logo.png'),
+      list: [
+        // {
+        //   name: 'FENPHO',
+        //   link: 'https://fenpho.github.io/',
+        // },
+        {
+          name: '',
+          link: '',
+          italic: 'Welcome!',
+        },
+        {
+          name: 'CREATIVE.',
+          link: '',
+          italic: 'Always',
+        },
+        // {
+        //   name: '',
+        //   link: 'https://fenpho.github.io/',
+        //   icon: getImageUrl('../assets/github.png'),
+        // },
+      ],
+     })
+
     return () => (
       <div id="App" class={styles.App}>
+        <ku-header header={header} />
         <aside class={styles.aside}>
           <ul>
             {data.links.map((v: LinkItem) => {

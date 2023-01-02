@@ -69,7 +69,7 @@ const header: Header = reactive({
 .base-ku-header {
   height: 200px;
   overflow-y: auto;
-  background-color: lightgreen;
+  // background-color: lightgreen;
   perspective: 0; // 景深，让fixed定位不脱离展示区域
 }
 </style>

@@ -16,7 +16,7 @@ interface More {
 interface Header {
   logo?: string,
   list: ListItem[],
-  more: More
+  more?: More
 }
 
 export default defineComponent({
@@ -122,14 +122,14 @@ export default defineComponent({
           </ul>
         </nav>
         {/* 更多 */}
-        <span class="more">
+        {props.header.more && <span class="more">
           <span class="more-name">{props.header.more.name}</span>
           <button class="menu-icon" title="More">
             <span class="icon-bar before"></span>
             <span class="icon-bar main"></span>
             <span class="icon-bar after"></span>
           </button>
-        </span>
+        </span>}
       </header >
     )
   }
