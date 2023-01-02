@@ -8,6 +8,7 @@ import { KuTagPlugin } from './components/Tag';
 import { KuHeaderPlugin } from './components/Header';
 import { KuCardPlugin } from './components/Card';
 import { KuFooterPlugin } from './components/Footer';
+import { KuAsidePlugin } from './components/Aside';
 
 const kuPlugin: Plugin = {
   install(app: App) {
@@ -16,6 +17,7 @@ const kuPlugin: Plugin = {
     KuHeaderPlugin.install?.(app);
     KuCardPlugin.install?.(app);
     KuFooterPlugin.install?.(app);
+    KuAsidePlugin.install?.(app);
   },
 };
 
@@ -26,3 +28,4 @@ export * from './components/Tag'
 export * from './components/Header'
 export * from './components/Card'
 export * from './components/Footer'
+export * from './components/Aside'

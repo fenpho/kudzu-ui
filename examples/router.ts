@@ -36,6 +36,11 @@
         name: 'Footer',
         path: '/components/Footer',
         component: () => import('../packages/components/Footer/docs/README.md'),
+      },{
+        title: '侧边栏',
+        name: 'Aside',
+        path: '/components/Aside',
+        component: () => import('../packages/components/Aside/docs/README.md'),
       }
  ]
 

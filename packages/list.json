@@ -28,5 +28,11 @@
     "compCnName": "页脚",
     "compDesc": "页面脚部",
     "compClassName": "ku-footer"
+  },
+  {
+    "compName": "Aside",
+    "compCnName": "侧边栏",
+    "compDesc": "网页侧边栏",
+    "compClassName": "ku-aside"
   }
 ]

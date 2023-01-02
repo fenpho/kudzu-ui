@@ -5,6 +5,7 @@ import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   ...base,
+  publicDir: path.resolve(__dirname, '../../packages/assets'),
   build: {
     outDir: 'lib',
     lib: {

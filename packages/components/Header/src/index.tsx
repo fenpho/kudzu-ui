@@ -81,6 +81,10 @@ export default defineComponent({
   },
 
   setup(props, { emit, slots }) {
+    const itemClick = (item: ListItem) => {
+      emit('item-click', item)
+    }
+
     return () => (
       <header class="ku-header" ref="KuHeader">
         {/* 标志 */}
@@ -95,7 +99,7 @@ export default defineComponent({
             {props.header.list.map((v: ListItem) => {
               if (v.link) {
                 return (
-                  <li>
+                  <li onClick={() => itemClick(v)}>
                     <a href={v.link}>
                       <img class="icon" src={v.icon} />
                       {v.italic ? <i class="italic">{v.italic}</i> : null}
@@ -105,7 +109,7 @@ export default defineComponent({
                 )
               } else {
                 return (
-                  <li>
+                  <li onClick={() => itemClick(v)}>
                     <span>
                       <img class="icon" src={v.icon} />
                       {v.italic ? <i class="italic">{v.italic}</i> : null}

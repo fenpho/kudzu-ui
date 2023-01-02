@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { getImageUrl } from '@kudzu/utils';
+import { getImageUrl } from '@kudzu/assets';
 defineOptions({
   name: 'BaseKuFooter',
 })
@@ -16,12 +16,12 @@ const footer = {
   list: [
     {
       name: 'Github',
-      icon: getImageUrl('../assets/github.png'),
+      icon: getImageUrl('./github.png'),
       link: 'https://github.com/fenpho'
     },
     // {
     //   name: 'Kudzu',
-    //   icon: getImageUrl('../assets/kudzu.png'),
+    //   icon: getImageUrl('./kudzu.png'),
     //   link: 'https://www.npmjs.com/package/kudzu-ui'
     // },
   ]
