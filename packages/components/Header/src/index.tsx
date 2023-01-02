@@ -84,6 +84,9 @@ export default defineComponent({
     const itemClick = (item: ListItem) => {
       emit('item-click', item)
     }
+    const moreClick = () => {
+      emit('more-click')
+    }
 
     return () => (
       <header class="ku-header" ref="KuHeader">
@@ -122,7 +125,7 @@ export default defineComponent({
           </ul>
         </nav>
         {/* 更多 */}
-        {props.header.more && <span class="more">
+        {props.header.more && <span class="more" onClick={() => moreClick()}>
           <span class="more-name">{props.header.more.name}</span>
           <button class="menu-icon" title="More">
             <span class="icon-bar before"></span>

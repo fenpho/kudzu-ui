@@ -2,7 +2,7 @@ import { defineComponent, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import styles from './App.module.less'
 import ComponentList from '@kudzu/list.json'
-import { getImageUrl } from '@kudzu/assets';
+import { getImageUrl } from '@kudzu/utils';
 
 interface ComponentsItem {
   compName: String;
@@ -29,7 +29,7 @@ export default defineComponent({
     })
 
     const header = reactive({
-      logo: getImageUrl('./logo.png'),
+      logo: getImageUrl('../assets/logo.png'),
       list: [
         // {
         //   name: 'FENPHO',
