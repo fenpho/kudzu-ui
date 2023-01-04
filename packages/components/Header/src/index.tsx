@@ -67,6 +67,7 @@ export default defineComponent({
           KuHeader.style.top = '0'
           KuHeader.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'
           KuHeader.style.animation = 'navShow 400ms'
+          KuHeader.style.boxShadow = '0 1px 3px #eff0f0'
         }
 
         if (scrollTop === 0) {
