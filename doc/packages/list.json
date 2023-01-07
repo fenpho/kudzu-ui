@@ -1,0 +1,38 @@
+[
+  {
+    "compName": "Button",
+    "compCnName": "按钮",
+    "compDesc": "这是一个按钮",
+    "compClassName": "ku-button"
+  },
+  {
+    "compName": "Tag",
+    "compCnName": "标签",
+    "compDesc": "这是一个标签组件",
+    "compClassName": "ku-tag"
+  },
+  {
+    "compName": "Header",
+    "compCnName": "页头",
+    "compDesc": "网页头部",
+    "compClassName": "ku-header"
+  },
+  {
+    "compName": "Card",
+    "compCnName": "卡片",
+    "compDesc": "卡片组件",
+    "compClassName": "ku-card"
+  },
+  {
+    "compName": "Footer",
+    "compCnName": "页脚",
+    "compDesc": "页面脚部",
+    "compClassName": "ku-footer"
+  },
+  {
+    "compName": "Aside",
+    "compCnName": "侧边栏",
+    "compDesc": "网页侧边栏",
+    "compClassName": "ku-aside"
+  }
+]

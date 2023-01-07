@@ -1,0 +1,53 @@
+.ku-card {
+  max-width: 70vw;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(auto-fill, 230px);
+
+  &>div {
+    padding: 15px;
+  }
+
+  &-left {
+    &-title {
+      line-height: 37px;
+      font-size: 20px;
+      color: #151515;
+      margin-bottom: 10px;
+
+      a {
+        color: #151515;
+      }
+    }
+
+    &-time {
+      font-size: 14px;
+      line-height: 14px;
+      color: #666;
+      padding-right: 6px;
+      margin-right: 6px;
+      border-right: 1px solid #666;
+    }
+  }
+
+  &-right {
+    position: relative;
+
+    &-desc {
+      color: #666;
+      font-size: 14px;
+      line-height: 30px;
+      margin-bottom: 10px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+    }
+
+    .ku-button {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+}
