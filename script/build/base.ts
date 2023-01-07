@@ -12,6 +12,7 @@ const pxtoviewportConfig = pxtoviewport({
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     VueMacros({
       plugins: {
