@@ -12,8 +12,6 @@ dist
 dist-ssr
 lib
 lib-ssr
-# doc
-# doc-ssr
 *.local
 
 # Editor directories and files

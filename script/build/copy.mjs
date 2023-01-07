@@ -5,4 +5,4 @@ const copy = (src, dist) => {
   spawn('cp', ['-r', , src, dist])
 };
 
-copy('./packages', './doc')
+copy('./packages', './docs')
