@@ -55,7 +55,7 @@ export default defineComponent({
      })
 
     const toComponent = (v: LinkItem) => {
-      router.push({ name: v.name })
+      router.push({ name: v.name as any })
     }
 
     return () => (
