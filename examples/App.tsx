@@ -1,5 +1,5 @@
 import { defineComponent, reactive } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import styles from './App.module.less'
 import ComponentList from '@kudzu/list.json'
 import { getImageUrl } from '@kudzu/utils';
@@ -19,6 +19,7 @@ export default defineComponent({
 
   setup() {
     const route = useRoute()
+    const router = useRouter()
 
     const data = reactive({
       links: ComponentList.map((item: ComponentsItem) => ({
@@ -53,6 +54,10 @@ export default defineComponent({
       ],
      })
 
+    const toComponent = (v: LinkItem) => {
+      router.push({ name: v.name })
+    }
+
     return () => (
       <div id="App" class={styles.App}>
         <ku-header header={header} />
@@ -61,7 +66,7 @@ export default defineComponent({
             {data.links.map((v: LinkItem) => {
               return (
                 <li class={{ [styles.item]: true, [styles.active]: v.name === route.name }}>
-                  <router-link key={v.path} to={v.path}>{v.cnName}</router-link>
+                  <a onClick={() => toComponent(v)}>{v.cnName}</a>
                 </li>
               )
             })
