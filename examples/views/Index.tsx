@@ -3,7 +3,7 @@ import { defineComponent } from "vue"
 export default defineComponent({
   setup() {
     return () => (
-      <div>Kudzu UI</div>
+      <div>葛藤UI Kudzu UI</div>
     )
   }
 })

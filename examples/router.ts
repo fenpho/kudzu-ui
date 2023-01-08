@@ -2,8 +2,8 @@
  * 根据 /packages 目录下的组件所生成的组件类侧边导航栏配置，请勿手动修改
  */
  import { createRouter, createWebHistory, RouterOptions } from 'vue-router'
- import Index from './views/Index'
- import Button from '../packages/components/Button/docs/README.md'
+ import Index from "./views/Index"
+ import GetStart from "./docs/get-start.md"
  
  const routes = [
   {
@@ -11,37 +11,34 @@
     name: 'Index',
     path: '/',
     component: Index,
+    redirect: '/get-start'
+  },
+  {
+    title: '起步',
+    name: 'GetStart',
+    path: '/get-start',
+    component: GetStart,
   },
   {
         title: '按钮',
         name: 'Button',
         path: '/components/Button',
-        component: Button,
+        component: () => import('../packages/components/Button/docs/README.md'),
       },{
         title: '标签',
         name: 'Tag',
         path: '/components/Tag',
         component: () => import('../packages/components/Tag/docs/README.md'),
       },{
-        title: '页头',
-        name: 'Header',
-        path: '/components/Header',
-        component: () => import('../packages/components/Header/docs/README.md'),
-      },{
         title: '卡片',
         name: 'Card',
         path: '/components/Card',
         component: () => import('../packages/components/Card/docs/README.md'),
       },{
-        title: '页脚',
-        name: 'Footer',
-        path: '/components/Footer',
-        component: () => import('../packages/components/Footer/docs/README.md'),
-      },{
-        title: '侧边栏',
-        name: 'Aside',
-        path: '/components/Aside',
-        component: () => import('../packages/components/Aside/docs/README.md'),
+        title: '菜单',
+        name: 'Menu',
+        path: '/components/Menu',
+        component: () => import('../packages/components/Menu/docs/README.md'),
       }
  ]
 

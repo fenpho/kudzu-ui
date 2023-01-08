@@ -12,7 +12,7 @@ const pxtoviewportConfig = pxtoviewport({
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/kudzu-ui/',
   plugins: [
     VueMacros({
       plugins: {

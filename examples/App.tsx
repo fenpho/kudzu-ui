@@ -3,6 +3,10 @@ import { useRoute, useRouter } from 'vue-router'
 import styles from './App.module.less'
 import ComponentList from '@kudzu/list.json'
 import { getImageUrl } from '@kudzu/utils';
+import Header from '@examples/components/Header'
+
+import PrismJS from 'prismjs' // markdown高亮
+import '@examples/assets/prism.css' // 高亮主题
 
 interface ComponentsItem {
   compName: String;
@@ -16,6 +20,15 @@ interface LinkItem {
 
 export default defineComponent({
   name: 'App',
+
+  components: {
+    [Header.name]: Header
+  },
+
+  async mounted() {
+    await this.$nextTick() // 确保在源码都渲染好了以后再执行高亮
+    PrismJS.highlightAll()
+  },
 
   setup() {
     const route = useRoute()

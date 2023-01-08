@@ -3,6 +3,7 @@
  */
  import { createRouter, createWebHistory, RouterOptions } from 'vue-router'
  import Index from "./views/Index"
+ import GetStart from "./docs/get-start.md"
  
  const routes = [
   {
@@ -10,6 +11,12 @@
     name: 'Index',
     path: '/',
     component: Index,
+  },
+  {
+    title: '起步',
+    name: 'GetStart',
+    path: '/',
+    component: GetStart,
   },
   {{ routes }}
  ]
