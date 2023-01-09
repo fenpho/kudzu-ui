@@ -1,5 +1,5 @@
 import { defineComponent, PropType } from 'vue'
-import './index.less'
+import './Footer.module.less'
 
 interface ListItem {
   name: '',

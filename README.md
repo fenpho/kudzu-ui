@@ -1,33 +1,29 @@
-# kudzu-UI
 
-葛藤UI
+# 葛藤UI
 
-## Project Setup
+## 安装
 
-```sh
-npm install
-```
+### npm 安装
+推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
 
-### Compile and Hot-Reload for Development
+`npm i kudzu-ui -S`
 
-```sh
-npm run dev
-```
+### yarn 安装
+推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
 
-### Type-Check, Compile and Minify for Production
+`yarn add kudzu-ui -S`
 
-```sh
-npm run build
-```
+## 使用
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+在 main.ts 中写入以下内容：
+```javascript
+import { createApp } from 'vue'
+import '@src/style.less'
+import App from '@src/App.vue'
+import router from '@src/router'
+import KudzuUI from 'kudzu-ui'
+import 'kudzu-ui/lib/style.css'
 
-```sh
-npm run test:unit
-```
+createApp(App).use(router).use(KudzuUI).mount('#app')
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```

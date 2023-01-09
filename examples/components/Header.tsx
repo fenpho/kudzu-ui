@@ -1,4 +1,5 @@
 import { defineComponent, PropType } from 'vue'
+import { useRouter } from 'vue-router'
 import style from './Header.module.less'
 
 interface ListItem {
@@ -45,7 +46,7 @@ export default defineComponent({
   },
 
   mounted() {
-    window.addEventListener('scroll', this.scroll)
+    // window.addEventListener('scroll', this.scroll)
   },
 
   methods: {
@@ -81,6 +82,7 @@ export default defineComponent({
   },
 
   setup(props, { emit, slots }) {
+    const router = useRouter()
     const itemClick = (item: ListItem) => {
       emit('item-click', item)
     }
@@ -91,7 +93,7 @@ export default defineComponent({
     return () => (
       <header class={style['ku-header']} ref="KuHeader">
         {/* 标志 */}
-        <span class={style.logo}>
+        <span class={style.logo} onClick={() => router.push('/')}>
           <a href="">
             <img src={props.header.logo} alt="logo" />
           </a>

@@ -2,8 +2,9 @@
  * 根据 /packages 目录下的组件所生成的组件类侧边导航栏配置，请勿手动修改
  */
  import { createRouter, createWebHistory, RouterOptions } from 'vue-router'
- import Index from "./views/Index"
- import GetStart from "./docs/get-start.md"
+ import Index from './views/Index'
+ import GetStart from './docs/get-start.md'
+ import Button from '../packages/components/Button/docs/README.md' // 单独列出，处理github pages的点击无法跳转问题
  
  const routes = [
   {
@@ -20,24 +21,25 @@
     component: GetStart,
   },
   {
-        title: '按钮',
-        name: 'Button',
-        path: '/components/Button',
-        component: () => import('../packages/components/Button/docs/README.md'),
-      },{
+    title: '按钮',
+    name: 'Button',
+    path: '/components/button',
+    component: Button,
+  }
+  ,{
         title: '标签',
         name: 'Tag',
-        path: '/components/Tag',
+        path: '/components/tag',
         component: () => import('../packages/components/Tag/docs/README.md'),
       },{
         title: '卡片',
         name: 'Card',
-        path: '/components/Card',
+        path: '/components/card',
         component: () => import('../packages/components/Card/docs/README.md'),
       },{
         title: '菜单',
         name: 'Menu',
-        path: '/components/Menu',
+        path: '/components/menu',
         component: () => import('../packages/components/Menu/docs/README.md'),
       }
  ]

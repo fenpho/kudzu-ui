@@ -64,10 +64,11 @@ const routerTplReplacer = (listFileContent) => {
   const routerFileTpl = fs.readFileSync(resolve(__dirname, routerFileFrom), 'utf-8')
   const routerMeta = {
     routes: listFileContent.map(comp => {
+      if (comp.compName === 'Button') return
       return `{
         title: '${comp.compCnName}',
         name: '${comp.compName}',
-        path: '/components/${comp.compName}',
+        path: '/components/${comp.compName.toLowerCase()}',
         component: () => import('../packages/components/${comp.compName}/docs/README.md'),
       }`
     })
