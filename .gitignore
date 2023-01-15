@@ -24,3 +24,7 @@ lib-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Lock files
+package-lock.json
+yarn-lock.json
