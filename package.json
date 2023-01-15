@@ -4,6 +4,7 @@
   "main": "./lib/kudzu-ui.umd.js",
   "module": "./lib/kudzu-ui.es.js",
   "license": "MIT",
+  "author": "fenpho",
   "homepage": "",
   "type": "module",
   "repository": {
